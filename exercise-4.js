@@ -1,27 +1,26 @@
-function cariModus(arr) {
-  var modusfrequent = 1;
+function cariModus (arr) {
   var modus = 0;
-  var angkam = [];
-  for (var i = 0; i < arr.length - 1; i++) {
-    for (var j = i; j < arr.length - 1; j++) {
+  var modusFreq = 1;
+  var angkaModus = -1;
+
+  for (var i = 0; i <= arr.length; i++) {
+    for (var j = 0; j <= arr.length; j++) {
       if (arr[i] === arr[j]) {
         modus = modus + 1;
-        if (modusfrequent < modus) {
-          modusfrequent = modus;
-          angkam = arr[i];
+        if (modusFreq < modus) {
+          modusFreq = modus;
+          angkaModus = arr[i];
         }
-        if (modusfrequent === modus) {
-          angkam = arr[i];
-        }
-      }
-      else {
-        angkam = -1;
       }
     }
     modus = 0;
-  } 
-  return angkam;
-  // you can only write your code here!
+  }
+
+  if (modusFreq === arr.length) {
+    angkaModus = -1;
+  }
+
+  return angkaModus;
 }
 
 

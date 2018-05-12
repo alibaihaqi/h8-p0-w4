@@ -1,6 +1,6 @@
 function cariMedian(arr) {
   // you can only write your code here!
-  var arr1 = arr.sort(function increment(value1,value2) { return value1 > value2 });
+  // var arr1 = arr.sort(function increment(value1,value2) { return value1 > value2 });
   var median = 0;
 
   if (arr.length % 2 === 0) {
